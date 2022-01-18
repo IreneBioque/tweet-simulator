@@ -10,7 +10,7 @@ import {TWEETS_STORAGE} from '../../utils/constants'
 
 
 const SendTweet = (props) => {
-    const {setToastProps} = props;
+    const {setToastProps, allTweets} = props;
     const [isOpenModal, setIsOpenModal] = useState(false);
 
     const openModal = () => {
@@ -24,6 +24,10 @@ const SendTweet = (props) => {
         e.preventDefault();
         const {name, tweet } = formValue;
         let AllTweetsArray = [];
+
+        if(allTweets){
+            AllTweetsArray = allTweets;
+        }
 
 
         if(!name || !tweet ){
