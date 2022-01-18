@@ -40,7 +40,6 @@ const FormSendTweet = (props) => {
                     <FormGroup>
                         <TextField 
                         className='form-send-tweet__form-textarea'
-                        // type="text"
                         name='tweet'
                         multiline
                         rows='6'
